@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Bootstrap demo - Registro de Autor</title>
     <link href="./wwwroot/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./wwwroot/css/bootstrap-icons.min.css">
     <script src="./wwwroot/js/jquery-4.0.0.min.js"></script>
@@ -17,74 +17,93 @@
             <a class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"> 
               <i class="bi bi-bootstrap fw-bold fs-5 pe-2"></i>
             </a>
-            <nav >
-            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-              <li><a class="nav-link text-white" href="#"> <i class="bi bi-house fw-bold fs-5 pe-2"></i>Home</a></li>
-              <li><a class="nav-link text-white" href="#"> 
-                  <i class="bi bi-box-arrow-in-left fw-bold fs-5 pe-2"></i>Login
-                </a></li>
-
-            </ul>
+            <nav>
+              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li><a class="nav-link text-white" href="#"><i class="bi bi-house fw-bold fs-5 pe-2"></i>Home</a></li>
+                <li><a class="nav-link text-white" href="#"><i class="bi bi-box-arrow-in-left fw-bold fs-5 pe-2"></i>Login</a></li>
+              </ul>
             </nav>
           </div>
-
         </div>
       </div>
     </header>
+
     <div class="container-fluid">
-
       <div class="row">
-
         <aside class="col-8 col-sm-6 col-md-3 col-lg-3 col-xl-2 d-none d-lg-block show"
-        style="position: fixed; top: 0;bottom: 0;left: 0;border-right: 1px solid var(--bs-border-color-translucent); margin-top:70px; padding: 15px 0 0;z-index: 999; overflow-y: auto;">
-        <div class="px-3">
-          <nav>
-          <ul class="nav nav-pills flex-column mb-auto">            
-            <li class="nav-item">
-              <a class="nav-link active" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulboff.gif'">
-              <i class="bi bi-lightbulb fw-bold fs-5 pe-2"></i>
-              Apagado</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulbon.gif'">
-              <i class="bi bi-lightbulb-fill fw-bold fs-5 pe-2"></i>
-              Encendido</a>
-            </li>
-          </ul>
-        </nav>
-        </div>
-        
-      </aside>
-
-      <main class="col-lg-9 col-xl-10 offset-lg-3 offset-xl-2">
-
-        <div class="row">
-          <div class="col-12 offset-sm-0 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 mt-5">
-            <article id="article">
-            <figure>
-              <img id="lightbulb" class="img-fluid" src="./wwwroot/img/bulboff.gif">
-            </figure>
-          </article>
-
+               style="position: fixed; top: 0;bottom: 0;left: 0;border-right: 1px solid var(--bs-border-color-translucent); margin-top:70px; padding: 15px 0 0;z-index: 999; overflow-y: auto;">
+          <div class="px-3">
+            <nav>
+              <ul class="nav nav-pills flex-column mb-auto">            
+                <li class="nav-item">
+                  <a class="nav-link active" href="#"><i class="bi bi-person-plus-fill fw-bold fs-5 pe-2"></i>Alta Autor</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulboff.gif'">
+                  <i class="bi bi-lightbulb fw-bold fs-5 pe-2"></i>Apagado</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulbon.gif'">
+                  <i class="bi bi-lightbulb-fill fw-bold fs-5 pe-2"></i>Encendido</a>
+                </li>
+              </ul>
+            </nav>
           </div>
+        </aside>
 
-        </div>
-          
-      </main>
+        <main class="col-lg-9 col-xl-10 offset-lg-3 offset-xl-2">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 mt-5">
+              
+              <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                  <h4 class="mb-0"><i class="bi bi-pencil-square pe-2"></i>Registrar Nuevo Autor</h4>
+                </div>
+                <div class="card-body">
+                  <form id="formAltaAutor">
+                    <div class="mb-3">
+                      <label for="id_auto" class="form-label">ID del Autor</label>
+                      <input type="number" class="form-control" id="id_auto" name="id_auto" placeholder="Ingrese ID numérico" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre Completo</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del autor" required>
+                    </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save pe-2"></i>Guardar Autor
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
 
+              <article id="article" class="mt-5 text-center">
+                <figure>
+                  <img id="lightbulb" class="img-fluid" src="./wwwroot/img/bulboff.gif" style="max-height: 150px;">
+                </figure>
+              </article>
+
+            </div>
+          </div>
+        </main>
       </div>
-      
-      <div class="row">
-        
-      </div>
-      
     </div>
-    
-    
-    
-
 
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Ejemplo básico para capturar el envío del formulario
+      $(document).ready(function() {
+        $('#formAltaAutor').on('submit', function(e) {
+          e.preventDefault();
+          const datos = {
+            id_auto: $('#id_auto').val(),
+            nombre: $('#nombre').val()
+          };
+          console.log("Enviando datos:", datos);
+          alert("Autor " + datos.nombre + " capturado localmente.");
+        });
+      });
+    </script>
   </body>
 </html>
-
