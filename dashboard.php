@@ -12,7 +12,7 @@ if (!isset($_SESSION['id_usuario'])) {
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Dashboard - Sistema de Autores</title>
     <link href="./wwwroot/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./wwwroot/css/bootstrap-icons.min.css">
     <script src="./wwwroot/js/jquery-4.0.0.min.js"></script>
@@ -26,62 +26,66 @@ if (!isset($_SESSION['id_usuario'])) {
             <a class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none"> 
               <i class="bi bi-bootstrap fw-bold fs-5 pe-2"></i>
             </a>
-            <nav >
-            <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-              <li><a class="nav-link text-white" href="#"> <i class="bi bi-house fw-bold fs-5 pe-2"></i>Home</a></li>
-              <li class="nav-item">
-                  <a class="nav-link active" href="#"><i class="bi bi-person-plus-fill fw-bold fs-5 pe-2"></i>Alta Autor</a>
-                </li>
-              <li><a class="nav-link text-white" href="logout.php"> 
-                  <i class="bi bi-box-arrow-in-left fw-bold fs-5 pe-2"></i>Salir
-                </a></li>
-
-            </ul>
+            <nav>
+              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                <li><a class="nav-link text-white" href="#"><i class="bi bi-house fw-bold fs-5 pe-2"></i>Home</a></li>
+                <li><a class="nav-link text-white" href="logout.php"><i class="bi bi-box-arrow-in-left fw-bold fs-5 pe-2"></i>Salir</a></li>
+              </ul>
             </nav>
           </div>
-
         </div>
       </div>
     </header>
+
     <div class="container-fluid">
-
       <div class="row">
-
-        <aside class="col-8 col-sm-6 col-md-3 col-lg-3 col-xl-2 d-none d-lg-block show"
-        style="position: fixed; top: 0;bottom: 0;left: 0;border-right: 1px solid var(--bs-border-color-translucent); margin-top:70px; padding: 15px 0 0;z-index: 999; overflow-y: auto;">
-        <div class="px-3">
-          <nav>
-          <ul class="nav nav-pills flex-column mb-auto">            
-            <li class="nav-item">
-              <a class="nav-link active" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulboff.gif'">
-              <i class="bi bi-lightbulb fw-bold fs-5 pe-2"></i>
-              Apagado</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"  href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulbon.gif'">
-              <i class="bi bi-lightbulb-fill fw-bold fs-5 pe-2"></i>
-              Encendido</a>
-            </li>
-          </ul>
-        </nav>
-        </div>
+        
+        <aside class="col-lg-3 col-xl-2 d-none d-lg-block border-end" 
+               style="position: fixed; top: 70px; bottom: 0; left: 0; padding-top: 15px; overflow-y: auto;">
+          <div class="px-3">
+            <nav>
+              <ul class="nav nav-pills flex-column mb-auto">            
+                <li class="nav-item">
+                  <a class="nav-link active mb-2" href="#"><i class="bi bi-person-plus-fill fw-bold fs-5 pe-2"></i>Autores</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulboff.gif'">
+                  <i class="bi bi-lightbulb fw-bold fs-5 pe-2"></i>Apagado</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulbon.gif'">
+                  <i class="bi bi-lightbulb-fill fw-bold fs-5 pe-2"></i>Encendido</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
 
         <main class="col-lg-9 col-xl-10 offset-lg-3 offset-xl-2">
-          <div class="row justify-content-center">
-            <div class="col-12 col-md-8 col-lg-6 mt-5">
-              
+          <div class="row mt-5">
+            
+            <div class="col-12 col-md-6 text-center">
+              <article id="article">
+                <h5 class="text-muted mb-4">Estado del Sistema</h5>
+                <figure>
+                  <img id="lightbulb" class="img-fluid" src="./wwwroot/img/bulboff.gif" style="max-height: 300px;">
+                </figure>
+              </article>
+            </div>
+
+            <div class="col-12 col-md-6">
               <div class="card shadow-sm">
-                <div class="card-header bg-white">
-                  <h4 class="mb-0"><i class="bi bi-pencil-square pe-2"></i>Registrar Nuevo Autor</h4>
+                <div class="card-header bg-white py-3">
+                  <h4 class="mb-0 fs-5"><i class="bi bi-pencil-square pe-2 text-primary"></i>Registrar Nuevo Autor</h4>
                 </div>
                 <div class="card-body">
                   <form id="formAltaAutor">
                     <div class="mb-3">
-                      <label for="id_auto" class="form-label">ID del Autor</label>
-                      <input type="number" class="form-control" id="id_auto" name="id_auto" placeholder="Ingrese ID numérico" required>
+                      <label for="id_auto" class="form-label small fw-bold">ID del Autor</label>
+                      <input type="number" class="form-control" id="id_auto" name="id_auto" placeholder="Ej: 101" required>
                     </div>
                     <div class="mb-3">
-                      <label for="nombre" class="form-label">Nombre Completo</label>
+                      <label for="nombre" class="form-label small fw-bold">Nombre Completo</label>
                       <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del autor" required>
                     </div>
                     <div class="d-grid">
@@ -92,40 +96,12 @@ if (!isset($_SESSION['id_usuario'])) {
                   </form>
                 </div>
               </div>
-        
-      </aside>
-
-      <main class="col-lg-9 col-xl-10 offset-lg-3 offset-xl-2">
-
-        <div class="row">
-          <div class="col-12 offset-sm-0 offset-lg-1 col-lg-10 offset-xl-2 col-xl-8 mt-5">
-            <article id="article">
-            <figure>
-              <img id="lightbulb" class="img-fluid" src="./wwwroot/img/bulboff.gif">
-            </figure>
-          </article>
-
-          </div>
-
-        </div>
-          
-      </main>
+            </div> </div>
+        </main>
 
       </div>
-      
-      <div class="row">
-        
-      </div>
-      
     </div>
-    
-    
-    
-
 
     <script src="./js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
-
-
-
