@@ -29,6 +29,9 @@ if (!isset($_SESSION['id_usuario'])) {
             <nav >
             <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
               <li><a class="nav-link text-white" href="#"> <i class="bi bi-house fw-bold fs-5 pe-2"></i>Home</a></li>
+              <li class="nav-item">
+                  <a class="nav-link active" href="#"><i class="bi bi-person-plus-fill fw-bold fs-5 pe-2"></i>Alta Autor</a>
+                </li>
               <li><a class="nav-link text-white" href="logout.php"> 
                   <i class="bi bi-box-arrow-in-left fw-bold fs-5 pe-2"></i>Salir
                 </a></li>
@@ -62,6 +65,33 @@ if (!isset($_SESSION['id_usuario'])) {
           </ul>
         </nav>
         </div>
+
+        <main class="col-lg-9 col-xl-10 offset-lg-3 offset-xl-2">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 mt-5">
+              
+              <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                  <h4 class="mb-0"><i class="bi bi-pencil-square pe-2"></i>Registrar Nuevo Autor</h4>
+                </div>
+                <div class="card-body">
+                  <form id="formAltaAutor">
+                    <div class="mb-3">
+                      <label for="id_auto" class="form-label">ID del Autor</label>
+                      <input type="number" class="form-control" id="id_auto" name="id_auto" placeholder="Ingrese ID numérico" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Nombre Completo</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del autor" required>
+                    </div>
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-save pe-2"></i>Guardar Autor
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
         
       </aside>
 
