@@ -48,14 +48,6 @@ if (!isset($_SESSION['id_usuario'])) {
                 <li class="nav-item">
                   <a class="nav-link active mb-2" href="#"><i class="bi bi-person-plus-fill fw-bold fs-5 pe-2"></i>Autores</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulboff.gif'">
-                  <i class="bi bi-lightbulb fw-bold fs-5 pe-2"></i>Apagado</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="#" onclick="document.getElementById('lightbulb').src='./wwwroot/img/bulbon.gif'">
-                  <i class="bi bi-lightbulb-fill fw-bold fs-5 pe-2"></i>Encendido</a>
-                </li>
               </ul>
             </nav>
           </div>
