@@ -34,7 +34,7 @@ if (!isset($_SESSION['id_usuario'])) {
 <body>
     <header class="navbar sticky-top flex-md-nowrap p-2 shadow">
         <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#"><i class="bi bi-book-half pe-2"></i>Biblioteca Pastel</a>
+            <a class="navbar-brand text-white" href="#"><i class="bi bi-book-half pe-2"></i>Biblioteca</a>
             <ul class="navbar-nav px-3">
                 <li class="nav-item text-nowrap">
                     <a class="nav-link text-white" href="logout.php"><i class="bi bi-box-arrow-right"></i> Salir</a>
@@ -59,12 +59,12 @@ if (!isset($_SESSION['id_usuario'])) {
                             <div class="card-body">
                                 <form action="procesar.php" method="POST">
                                     <input type="hidden" name="tipo" value="autor">
-                                    <div class="mb-3"><label class="form-label">ID Autor</label><input type="number" name="id_autor" class="form-control" required autofocus="false"></div>
+                          
                                     <div class="mb-3"><label class="form-label">Nombre</label><input type="text" name="nombre" class="form-control" required></div>
                                     <button type="submit" class="btn btn-primary w-100">Guardar Autor</button>
                                 </form>
                             </div>
-                        </div>
+        
                     </div>
 
                     <div class="col-md-4">
@@ -73,13 +73,13 @@ if (!isset($_SESSION['id_usuario'])) {
                             <div class="card-body">
                                 <form action="procesar.php" method="POST">
                                     <input type="hidden" name="tipo" value="libro">
-                                    <div class="mb-3"><label class="form-label">ID Libro</label><input type="number" name="id_libro" class="form-control" required></div>
+                                  
                                     <div class="mb-3"><label class="form-label">Título</label><input type="text" name="titulo" class="form-control" required></div>
                                     <div class="mb-3"><label class="form-label">Páginas</label><input type="number" name="paginas" class="form-control" required></div>
                                     <button type="submit" class="btn btn-primary w-100">Guardar Libro</button>
                                 </form>
                             </div>
-                        </div>
+                      
                     </div>
 
                     <div class="col-md-4">
