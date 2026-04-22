@@ -24,7 +24,7 @@ $prestamos = $db->query("
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Dashboard - Biblioteca Pastel</title>
+    <title>Dashboard - Biblioteca</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -54,7 +54,7 @@ $prestamos = $db->query("
 <body>
     <header class="navbar sticky-top p-2 shadow">
         <div class="container-fluid">
-            <a class="navbar-brand text-white fw-bold" href="#"><i class="bi bi-book-half pe-2"></i>Biblioteca Pastel</a>
+            <a class="navbar-brand text-white fw-bold" href="#"><i class="bi bi-book-half pe-2"></i>Biblioteca</a>
             <a class="nav-link text-white" href="logout.php"><i class="bi bi-box-arrow-right"></i> Salir</a>
         </div>
     </header>
