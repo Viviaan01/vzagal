@@ -151,7 +151,7 @@ $prestamos = $db->query("
                             <tr>
                                 <td><?= $l['id_libro'] ?></td>
                                 <td><?= htmlspecialchars($l['titulo']) ?></td>
-                                <td><?= $l['numero_paginas'] ?></td>
+                                <td><?= $l['numero_de_paginas'] ?></td>
                             </tr>
                             <?php endforeach; ?>
                         </tbody>
