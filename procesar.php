@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mensaje = "El autor " . $_POST['nombre'] . " fue registrado.";
         } 
         elseif ($tipo == "libro") {
-            $sql = "INSERT INTO libros (id_libro, titulo, numero_paginas) VALUES (:id, :tit, :pag)";
+            $sql = "INSERT INTO libros (id_libro, titulo, numero_de_paginas) VALUES (:id, :tit, :pag)";
             $stmt = $db->prepare($sql);
             $stmt->execute(['id' => $_POST['id_libro'], 'tit' => $_POST['titulo'], 'pag' => $_POST['paginas']]);
             $mensaje = "El libro '" . $_POST['titulo'] . "' fue guardado.";
