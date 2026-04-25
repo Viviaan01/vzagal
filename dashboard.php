@@ -22,7 +22,7 @@ $prestamos = $db->query("
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sistema Biblioteca - Pastel</title>
+    <title>Sistema Biblioteca </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -120,7 +120,7 @@ $prestamos = $db->query("
             <div class="tab-pane fade show active" id="inicio" role="tabpanel">
                 <div class="text-center mt-5">
                     <h1 class="display-4 fw-bold">¡Bienvenido a nuestra Biblioteca!</h1>
-                    <p class="lead">Gestiona tus libros y autores de forma fácil y organizada.</p>
+                    <p class="lead"></p>
                     <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1000&auto=format&fit=crop" alt="Libros" class="welcome-img shadow">
                 </div>
             </div>
