@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['id_usuario'])) {
     $_SESSION['id_usuario'] = $_COOKIE['id_usuario'];
-    header("Location: index.html");
+    header("Location: index.php");
     exit();
 }
 
